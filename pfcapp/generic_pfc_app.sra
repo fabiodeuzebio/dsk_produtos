@@ -43,8 +43,6 @@ event open;/***
 gnv_app = CREATE pfc_nvo_principal
  
 gnv_app.Event Static Trigger pfc_open(CommandParm())
-
-//testefabio
 end event
 
 event close;gnv_app.TriggerEvent ( "pfc_close" )
