@@ -4,5 +4,6 @@ Save Format v3.0(19990112)
 @end;
 @begin Objects
  "pfcapp\\generic_pfc_app.sra" "pfcapp\\pfcapp.pbl";
+ "pfcapp\\m_principal.srm" "pfcapp\\pfcapp.pbl";
  "pfcapp\\generic_pfc_app_winform.srj" "pfcapp\\pfcapp.pbl";
 @end;
