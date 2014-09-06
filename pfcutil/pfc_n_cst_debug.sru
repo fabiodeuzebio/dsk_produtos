@@ -25,6 +25,7 @@ n_cst_sqlspy	inv_sqlspy
 Protected:
 boolean		ib_alwaysontop=False
 end variables
+
 forward prototypes
 public function integer of_setsqlspy (boolean ab_switch)
 public function integer of_message (string as_message)
