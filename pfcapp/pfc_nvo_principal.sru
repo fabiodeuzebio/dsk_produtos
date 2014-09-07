@@ -64,3 +64,7 @@ this.of_SetAppIniFile("Sys.ini")
 
 end event
 
+event pfc_logon;if guoGeral.of_autenticacao(as_userid,as_password) then return 1
+return -1
+end event
+

@@ -21,6 +21,7 @@ type p_logo from w_logon`p_logo within w_login
 end type
 
 type st_help from w_logon`st_help within w_login
+string text = "Entre com usu$$HEX1$$e100$$ENDHEX$$rio e senha para acesso ao sistema"
 end type
 
 type cb_ok from w_logon`cb_ok within w_login
@@ -37,8 +38,10 @@ type sle_password from w_logon`sle_password within w_login
 end type
 
 type st_2 from w_logon`st_2 within w_login
+string text = "Login:"
 end type
 
 type st_3 from w_logon`st_3 within w_login
+string text = "Senha"
 end type
 
