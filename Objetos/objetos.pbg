@@ -1,0 +1,16 @@
+Save Format v3.0(19990112)
+@begin Libraries
+ "Objetos\\objetos.pbl" "";
+@end;
+@begin Objects
+ "Objetos\\uo_checkbox.sru" "Objetos\\objetos.pbl";
+ "Objetos\\uo_data_store.sru" "Objetos\\objetos.pbl";
+ "Objetos\\uo_geral.sru" "Objetos\\objetos.pbl";
+ "Objetos\\uo_editmask.sru" "Objetos\\objetos.pbl";
+ "Objetos\\uo_static_text.sru" "Objetos\\objetos.pbl";
+ "Objetos\\uo_botao.sru" "Objetos\\objetos.pbl";
+ "Objetos\\uo_datawindow.sru" "Objetos\\objetos.pbl";
+ "Objetos\\uo_single_line_edit.sru" "Objetos\\objetos.pbl";
+ "Objetos\\uo_ddlistbox.sru" "Objetos\\objetos.pbl";
+ "Objetos\\uo_radio_button.sru" "Objetos\\objetos.pbl";
+@end;
