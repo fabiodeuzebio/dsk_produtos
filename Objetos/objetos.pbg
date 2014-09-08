@@ -1,8 +1,9 @@
 Save Format v3.0(19990112)
 @begin Libraries
- "Objetos\\objetos.pbl" "";
+ "objetos\\objetos.pbl" "";
 @end;
 @begin Objects
+ "objetos\\uo_tabpage.sru" "objetos\\objetos.pbl";
  "Objetos\\uo_checkbox.sru" "Objetos\\objetos.pbl";
  "Objetos\\uo_data_store.sru" "Objetos\\objetos.pbl";
  "Objetos\\uo_geral.sru" "Objetos\\objetos.pbl";
