@@ -5,7 +5,6 @@ end type
 end forward
 
 global type w_principal from w_frame
-integer x = 107
 string title = "X Cobran$$HEX1$$e700$$ENDHEX$$as"
 string menuname = "m_principal"
 windowstate windowstate = maximized!
@@ -29,6 +28,9 @@ liReturn = gnv_app.of_LogonDlg( )
 
 IF liReturn = 1 THEN
 	this.SetMicroHelp("Login efetuado com sucesso ")
+	
+	// Display the Splash window
+    gnv_app.of_Splash(1)
 ELSE
 	MessageBox("Logon", "Falha no Login")
 	Close(this)

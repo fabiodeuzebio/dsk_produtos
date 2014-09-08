@@ -11,9 +11,6 @@ global pfc_nvo_principal pfc_nvo_principal
 event pfc_open;call super::pfc_open;integer	li_return
 string	ls_inifile
 
-// Display the Splash window
-this.of_Splash(1)
-
 // Initialize the various functionality of this service
 this.of_SetTrRegistration(TRUE)
 this.of_SetError(TRUE)
@@ -54,9 +51,9 @@ lcx_key.GetMajorVersion ( li_major )
 lcx_key.GetMinorVersion ( li_minor )
 
 // Set the default information needed for this application
-iapp_object.DisplayName = "Aqui vamos colocar o nome do projejto"
+iapp_object.DisplayName = "~nExata Cobran$$HEX1$$e700$$ENDHEX$$as"
 this.of_SetCopyright("Copyright (c) 2014-" + String ( Year ( ld_now ), "0000" ) + " All rights reserved.")
-this.of_SetLogo("peat.bmp")
+this.of_SetLogo("logo.jpg")
 this.of_SetVersion("Version " + String ( li_major ) + "." + String ( li_minor ) + ".00")
 this.of_SetAppIniFile("Sys.ini")
 
