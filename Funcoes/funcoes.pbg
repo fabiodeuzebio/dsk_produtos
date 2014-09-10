@@ -1,9 +1,0 @@
-Save Format v3.0(19990112)
-@begin Libraries
- "Funcoes\\funcoes.pbl" "";
-@end;
-@begin Objects
- "Funcoes\\f_valida_cnpj.srf" "Funcoes\\funcoes.pbl";
- "Funcoes\\f_valida_cpf.srf" "Funcoes\\funcoes.pbl";
- "Funcoes\\f_sodig.srf" "Funcoes\\funcoes.pbl";
-@end;
