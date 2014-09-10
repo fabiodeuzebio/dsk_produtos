@@ -6,7 +6,7 @@ end forward
 
 global type w_principal from w_frame
 string title = "X Cobran$$HEX1$$e700$$ENDHEX$$as"
-string menuname = "m_principal"
+string menuname = "m_master"
 windowstate windowstate = maximized!
 end type
 global w_principal w_principal
@@ -14,7 +14,7 @@ global w_principal w_principal
 on w_principal.create
 call super::create
 if IsValid(this.MenuID) then destroy(this.MenuID)
-if this.MenuName = "m_principal" then this.MenuID = create m_principal
+if this.MenuName = "m_master" then this.MenuID = create m_master
 end on
 
 on w_principal.destroy
