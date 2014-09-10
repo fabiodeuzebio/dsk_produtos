@@ -1,0 +1,107 @@
+HA$PBExportHeader$f_valida_cnpj.srf
+global type f_valida_cnpj from function_object
+end type
+
+forward prototypes
+global function string f_valida_cnpj (string ascnpj, character acsolicitacao)
+end prototypes
+
+global function string f_valida_cnpj (string ascnpj, character acsolicitacao);//    AUTOR: RENATO SABINO
+// 
+//	Descri$$HEX2$$e700e300$$ENDHEX$$o: Recebe um n$$HEX1$$fa00$$ENDHEX$$mero de CNPJ, formatado ou n$$HEX1$$e300$$ENDHEX$$o, e faz o c$$HEX1$$e100$$ENDHEX$$lculo dos d$$HEX1$$ed00$$ENDHEX$$gitos	verificadores.
+//	
+//	Par$$HEX1$$e200$$ENDHEX$$metros: asCnpj (String) acSolicitacao (Char), podendo ser  "V" - Valida$$HEX2$$e700e300$$ENDHEX$$o 	"I" - Informa$$HEX2$$e700e300$$ENDHEX$$o	
+//
+//	Retorno (String): 	C	 	- Valida$$HEX2$$e700e300$$ENDHEX$$o Correta	(s$$HEX2$$f3002000$$ENDHEX$$para Valida$$HEX2$$e700e300$$ENDHEX$$o)
+//	E	 	- Valida$$HEX2$$e700e300$$ENDHEX$$o Errada 	(s$$HEX2$$f3002000$$ENDHEX$$para Valida$$HEX2$$e700e300$$ENDHEX$$o)
+//	00 a 99	- D$$HEX1$$ed00$$ENDHEX$$gitos Corretos 	(s$$HEX2$$f3002000$$ENDHEX$$para Informa$$HEX2$$e700e300$$ENDHEX$$o)
+//	P	 	- Dados do(s) Par$$HEX1$$e200$$ENDHEX$$metro(s) errado(s)
+//
+Long ll_t1, ll_t2
+Integer li_r1, li_d1, li_r2, li_d2
+String li_digito
+
+acSolicitacao = Upper(acSolicitacao)
+
+If acSolicitacao <> "V" and acSolicitacao <> "I" then // erro
+   return "P"
+
+End if
+
+// chama a funcao de retirada de outros caracteres que n$$HEX1$$e300$$ENDHEX$$o num$$HEX1$$e900$$ENDHEX$$ricos
+// Esta fun$$HEX2$$e700e300$$ENDHEX$$o vc pode eliminar ou pegar no site da SABSOFT no link
+// Dicas de PowerBuilder
+asCnpj = f_sodig(asCnpj)  
+
+// Verifica se a quantidade de caracteres enviada para a fun$$HEX2$$e700e300$$ENDHEX$$o est$$HEX2$$e1002000$$ENDHEX$$correta
+If len(asCnpj) > 14 Then
+  	return "P"
+  
+End if
+
+If acSolicitacao = "V" Then
+If len(asCnpj) <> 14 Then
+   	return "P"
+
+End if
+
+else
+   If len(asCnpj) < 12 then
+return "P"
+
+End if
+
+End if
+
+
+ll_t1 = Integer(mid(asCnpj,1,1)) * 5 + Integer(mid(asCnpj,2,1)) * 4 + &
+        Integer(mid(asCnpj,3,1)) * 3 + Integer(mid(asCnpj,4,1)) * 2 + &
+        Integer(mid(asCnpj,5,1)) * 9 + Integer(mid(asCnpj,6,1)) * 8 + &
+  Integer(mid(asCnpj,7,1)) * 7 + Integer(mid(asCnpj,8,1)) * 6 + & 
+        Integer(mid(asCnpj,9,1)) * 5 + Integer(mid(asCnpj,10,1)) * 4 + &
+  Integer(mid(asCnpj,11,1)) * 3 + Integer(mid(asCnpj,12,1)) * 2 
+
+li_r1 = Mod(ll_t1,11)
+
+If li_r1 < 2 then
+li_d1 = 0
+
+Else
+li_d1 = Integer(String(11 - li_r1,"0"))
+
+End If	
+
+ll_t2 = Integer(mid(asCnpj,1,1)) * 6 + Integer(mid(asCnpj,2,1)) * 5 + &
+        Integer(mid(asCnpj,3,1)) * 4 + Integer(mid(asCnpj,4,1)) * 3 + &
+        Integer(mid(asCnpj,5,1)) * 2 + Integer(mid(asCnpj,6,1)) * 9 + &
+  Integer(mid(asCnpj,7,1)) * 8 + Integer(mid(asCnpj,8,1)) * 7 + & 
+        Integer(mid(asCnpj,9,1)) * 6 + Integer(mid(asCnpj,10,1)) * 5 + &
+  Integer(mid(asCnpj,11,1)) * 4 + Integer(mid(asCnpj,12,1)) * 3 + & 
+  li_d1 * 2
+
+li_r2 = Mod(ll_t2,11)
+
+If li_r2 < 2 then
+li_d2 = 0
+
+Else
+li_d2 = Integer(String(11 - li_r2,"0"))
+
+End If	
+
+li_digito = String(li_d1) + String(li_d2)
+
+
+If acSolicitacao = "V" then // valida$$HEX2$$e700e300$$ENDHEX$$o
+if li_digito <> mid(asCnpj,13,2) then  // $$HEX2$$e9002000$$ENDHEX$$diferente
+return "E"
+
+   End if
+
+return "C"
+
+end if
+
+return li_digito
+end function
+

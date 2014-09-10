@@ -1,0 +1,8 @@
+Save Format v3.0(19990112)
+@begin Libraries
+ "Seguranca\\seguranca.pbl" "";
+@end;
+@begin Objects
+ "Seguranca\\nvo_cripto.sru" "Seguranca\\seguranca.pbl";
+ "Seguranca\\n_cryptoapi.sru" "Seguranca\\seguranca.pbl";
+@end;

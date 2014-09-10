@@ -1,0 +1,8 @@
+Save Format v3.0(19990112)
+@begin Libraries
+ "Padrao\\padrao.pbl" "";
+@end;
+@begin Objects
+ "Padrao\\w_generica_cad_tabpg.srw" "Padrao\\padrao.pbl";
+ "Padrao\\w_generica_cad.srw" "Padrao\\padrao.pbl";
+@end;
