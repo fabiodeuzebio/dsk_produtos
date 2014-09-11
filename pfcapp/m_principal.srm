@@ -37,6 +37,7 @@ end type
 
 on m_file.create
 call super::create
+this.text = "&Arquivo"
 this.menutextcolor = 134217735
 this.menubackcolor = 134217732
 this.menuhighlightcolor = 134217741
@@ -63,6 +64,7 @@ end type
 
 on m_new.create
 call super::create
+this.visible = false
 this.toolbaritemname = "scriptno!"
 this.menutextcolor = 134217735
 this.menubackcolor = 134217732
@@ -90,6 +92,7 @@ end type
 
 on m_open.create
 call super::create
+this.visible = false
 this.toolbaritemname = "custom050!"
 this.menutextcolor = 134217735
 this.menubackcolor = 134217732
@@ -117,6 +120,7 @@ end type
 
 on m_close.create
 call super::create
+this.visible = false
 this.toolbaritemname = "custom039!"
 this.menutextcolor = 134217735
 this.menubackcolor = 134217732
@@ -1831,6 +1835,7 @@ end type
 
 on m_tools.create
 call super::create
+this.text = "&Utilit$$HEX1$$e100$$ENDHEX$$rios"
 this.menutextcolor = 134217735
 this.menubackcolor = 134217732
 this.menuhighlightcolor = 134217741
@@ -1857,6 +1862,7 @@ end type
 
 on m_toolbars.create
 call super::create
+this.text = "&Personalizar barra"
 this.menutextcolor = 134217735
 this.menubackcolor = 134217732
 this.menuhighlightcolor = 134217741
@@ -1883,6 +1889,7 @@ end type
 
 on m_window.create
 call super::create
+this.text = "&Janela"
 this.menutextcolor = 134217735
 this.menubackcolor = 134217732
 this.menuhighlightcolor = 134217741
@@ -1909,6 +1916,7 @@ end type
 
 on m_cascade.create
 call super::create
+this.text = "&Cascata"
 this.toolbaritemname = "cascade!"
 this.menutextcolor = 134217735
 this.menubackcolor = 134217732
@@ -1936,6 +1944,7 @@ end type
 
 on m_tilehorizontal.create
 call super::create
+this.text = "Divis$$HEX1$$e300$$ENDHEX$$o &Horizontal"
 this.toolbaritemname = "horizontal!"
 this.menutextcolor = 134217735
 this.menubackcolor = 134217732
@@ -1963,6 +1972,7 @@ end type
 
 on m_tilevertical.create
 call super::create
+this.text = "Divis$$HEX1$$e300$$ENDHEX$$o &Vertical"
 this.toolbaritemname = "tile!"
 this.menutextcolor = 134217735
 this.menubackcolor = 134217732
@@ -1990,6 +2000,7 @@ end type
 
 on m_layer.create
 call super::create
+this.text = "&Camada"
 this.toolbaritemname = "layer!"
 this.menutextcolor = 134217735
 this.menubackcolor = 134217732
@@ -2043,6 +2054,7 @@ end type
 
 on m_minimizeall.create
 call super::create
+this.text = "&Minimizar todas as janelas"
 this.menutextcolor = 134217735
 this.menubackcolor = 134217732
 this.menuhighlightcolor = 134217741
@@ -2069,6 +2081,7 @@ end type
 
 on m_undoarrange.create
 call super::create
+this.text = "&Jjanela padr$$HEX1$$e300$$ENDHEX$$o"
 this.menutextcolor = 134217735
 this.menubackcolor = 134217732
 this.menuhighlightcolor = 134217741
@@ -2095,6 +2108,7 @@ end type
 
 on m_help.create
 call super::create
+this.text = "&Ajuda"
 this.menutextcolor = 134217735
 this.menubackcolor = 134217732
 this.menuhighlightcolor = 134217741
@@ -2121,6 +2135,7 @@ end type
 
 on m_helptopics.create
 call super::create
+this.visible = false
 this.toolbaritemname = "custom101!"
 this.menutextcolor = 134217735
 this.menubackcolor = 134217732
@@ -2174,6 +2189,7 @@ end type
 
 on m_about.create
 call super::create
+this.text = "&Sobre"
 this.menutextcolor = 134217735
 this.menubackcolor = 134217732
 this.menuhighlightcolor = 134217741
