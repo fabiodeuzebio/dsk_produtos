@@ -5,8 +5,9 @@ end type
 end forward
 
 global type w_principal from w_frame
+integer x = 107
 string title = "X Cobran$$HEX1$$e700$$ENDHEX$$as"
-string menuname = "m_master"
+string menuname = "m_principal"
 windowstate windowstate = maximized!
 end type
 global w_principal w_principal
@@ -14,7 +15,7 @@ global w_principal w_principal
 on w_principal.create
 call super::create
 if IsValid(this.MenuID) then destroy(this.MenuID)
-if this.MenuName = "m_master" then this.MenuID = create m_master
+if this.MenuName = "m_principal" then this.MenuID = create m_principal
 end on
 
 on w_principal.destroy
@@ -36,5 +37,9 @@ ELSE
 	Close(this)
 END IF
 
+end event
+
+event pfc_messagerouter;call super::pfc_messagerouter;MessageBox('',as_message)
+return 1
 end event
 
