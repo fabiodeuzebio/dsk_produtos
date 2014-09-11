@@ -15,6 +15,7 @@ global variables
 pfc_nvo_principal gnv_app 
 uo_geral guoGeral
 end variables
+
 global type generic_pfc_app from application
 string appname = "generic_pfc_app"
 end type
