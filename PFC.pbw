@@ -1,8 +1,0 @@
-Save Format v3.0(19990112)
-@begin Unchecked
-@end;
-@begin Targets
- 0 "pfcapp\\generic_pfc_app.pbt";
-@end;
-DefaultTarget "pfcapp\\generic_pfc_app.pbt";
-DefaultRemoteTarget "pfcapp\\generic_pfc_app.pbt";
