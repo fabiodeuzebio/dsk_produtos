@@ -39,7 +39,11 @@ END IF
 
 end event
 
-event pfc_messagerouter;call super::pfc_messagerouter;MessageBox('',as_message)
+event pfc_messagerouter;call super::pfc_messagerouter;Choose case as_Message
+	case "pfc_usuarios"
+		OpenSheet(w_usuarios, this, 1,original!)
+end choose
+
 return 1
 end event
 
